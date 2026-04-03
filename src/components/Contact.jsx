@@ -85,7 +85,7 @@ export default function Contact() {
     e.preventDefault()
     if (!accessKey) {
       setFeedback(
-        'Add VITE_WEB3FORMS_ACCESS_KEY to your .env file. Get a free key at web3forms.com and use rahmonabdul297@gmail.com as the form email.'
+        'try again later!'
       )
       setStatus('error')
       return
