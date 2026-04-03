@@ -14,7 +14,7 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-base leading-relaxed text-white/50">
               <p>
-                I am a full-stack software engineer with over a decade of experience helping companies
+                I am a full-stack software engineer with over two years of experience helping companies
                 architect and scale complex digital products. My approach is rooted in the belief that
                 great code is maintainable—it solves complex business logic while remaining highly
                 performant.
