@@ -53,7 +53,7 @@ function buildEmailHtml({ name, email, message }) {
 }
 
 export default function Contact() {
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+  const accessKey = `f631ada8-dcd1-49bd-9163-be62a95354b7`
   const [formOpen, setFormOpen] = useState(false)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -97,7 +97,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: accessKey,
+          access_key:accessKey,
           subject: `Portfolio — message from ${name.trim()}`,
           from_name: 'Portfolio — Abdulrahmon Yekini',
           name: name.trim(),
