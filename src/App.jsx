@@ -14,7 +14,7 @@ import { IoLogoWhatsapp } from 'react-icons/io'
 
 export default function App() {
   useScrollReveal()
-const name = "Abdulrahmon"
+const name = "Abdulrahmon yekini"
   return (
     <div className="antialiased selection:bg-[#C9A84C]/30 selection:text-white">
       <div
@@ -25,7 +25,9 @@ const name = "Abdulrahmon"
         }}
       />
       <div>
-           <FaAngleDoubleUp size={20} className="fixed bottom-20 right-7 lg:right-12  z-50 text-[#C9A84C] mb-2 animate-bounce"/>
+           <a href="#">
+            <FaAngleDoubleUp size={20} className="fixed bottom-20 right-7 lg:right-12  z-50 text-[#C9A84C] mb-2 animate-bounce" />
+           </a>
             <a href="https://wa.me/+2347089136508" className="fixed bottom-10 right-5 lg:right-10  z-50 bg-AppWhite p-1  border border-AppRed shadow-AppRed rounded-[50%] text-green-500 animate-pulse">
               {" "}
               <IoLogoWhatsapp size={30} />

@@ -6,7 +6,7 @@ const PROJECTS = [
     image:
       '/images/project template.png',
     imageAlt: 'Aether Finance',
-    stack: 'React / Node.js',
+    stack: 'React|vite|tailwindcss / Node.js',
     year: '2025',
     title: 'Islamic Platform',
     contribution: 'Developed the frontend and backend of the app.',
@@ -19,7 +19,7 @@ const PROJECTS = [
     image:
       '/images/2026-03-24 (1).png',
     imageAlt: 'Lumina Web App',
-    stack: 'Next.js / AWS',
+    stack: 'react|vue|tailwindcss',
     year: '2024',
     title: 'crypto Web App',
     contribution: 'frontend of the app.',
@@ -35,6 +35,7 @@ const PROJECTS = [
     stack: 'Vue / Python',
     year: '2022',
     title: 'Onyx Inventory System',
+    contribution: 'frontend of the app.',
     description:
       'Custom e-commerce backend and real-time inventory tracking system built with microservices architecture.',
     delay: undefined,
@@ -46,6 +47,7 @@ const PROJECTS = [
     stack: 'TypeScript / GraphQL',
     year: '2022',
     title: 'Verve CMS',
+    contribution: 'frontend of the app.',
     description:
       'Headless content management system featuring collaborative editing and real-time WebSockets synchronization.',
     delay: '0.1s',
@@ -103,6 +105,11 @@ export default function Work() {
                   <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A84C]">{p.stack}</span>
                   <span className="w-1 h-1 rounded-full bg-white/20" />
                   <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">{p.year}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A84C]">contribution:</span>
+                  <span className="w-1 h-1 rounded-full bg-white/20" />
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">{p.contribution}</span>
                 </div>
                 <h4 className="font-serif text-2xl tracking-tight text-white/90 mb-2 capitalize">{p.title}</h4>
                 <p className="text-sm text-white/40">{p.description}</p>
