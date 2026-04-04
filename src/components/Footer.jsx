@@ -11,7 +11,7 @@ export default function Footer({name}) {
       <div className="max-w-7xl mx-auto py-16 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-[#C9A84C]/5">
-            <span className="font-serif text-xs tracking-tighter text-[#C9A84C]">{name.charAt(0)}</span>
+          <img src="/public/images/my-img.jpg" alt=""  className='h-full w-full rounded-full'/>
           </div>
           <span className="font-serif text-sm text-white/90 uppercase">{name}</span>
         </div>
@@ -30,10 +30,10 @@ export default function Footer({name}) {
       </div>
 
       <div className="max-w-7xl mx-auto py-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="text-[10px] tracking-widest uppercase text-white/20">
-          © 2026 Abdulrahmon Engineering.
+        <p className="text-[10px] tracking-widest uppercase text-white/50">
+          © 2026 engr. {name}.
         </p>
-        <p className="text-[10px] tracking-widest uppercase text-white/20">All rights reserved.</p>
+        <p className="text-[10px] tracking-widest uppercase text-white/50">All rights reserved.</p>
       </div>
     </footer>
   )

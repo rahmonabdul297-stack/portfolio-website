@@ -35,11 +35,14 @@ export default function Hero({name}) {
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-24">
         <div className="animate-fade-in mb-8" style={{ animationDelay: '0.2s', opacity: 0 }}>
           <div
-            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border"
+            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border "
             style={{ borderColor: 'rgba(201,168,76,0.2)', background: 'rgba(201,168,76,0.03)' }}
           >
-            <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#C9A84C' }} />
-            <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase" style={{ color: '#C9A84C' }}>
+             <span className="text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase" style={{ color: '#C9A84C' }}>
+              active
+            </span>
+            <div className="w-2 h-2  rounded-full bg-green-600 animate-pulse" />
+            <span className="text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase" style={{ color: '#C9A84C' }}>
               Full-Stack Software Engineer
             </span>
           </div>
@@ -49,7 +52,7 @@ export default function Hero({name}) {
           className="font-serif text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-8 animate-fade-in-up"
           style={{ animationDelay: '0.4s', opacity: 0 }}
         >
-      Hi, I'm <span className="nameAnimation">{name}</span>,
+      Hi, I'm <span className="nameAnimation text-3xl md:text-5xl lg:text-6xl ">{name}</span>,
          </h1>
         <p
           className="text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mb-12 animate-fade-in-up text-white/50"

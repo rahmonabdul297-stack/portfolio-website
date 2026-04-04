@@ -36,7 +36,7 @@ const name = "Abdulrahmon yekini"
       <Navigation name={name} />
       <Hero name={name} />
       <SkillsMarquee />
-      <About />
+      <About name={name}/>
       <Expertise />
       <Work />
       <Experience />

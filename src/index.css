@@ -108,7 +108,7 @@ body {
 
 
 .nameAnimation{
-  text-transform: capitalize;
+  text-transform: uppercase;
   animation: color 1s linear infinite;
 }
 

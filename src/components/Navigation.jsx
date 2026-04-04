@@ -26,11 +26,12 @@ const [selected, setSelected] = useState(null)
         <div className="flex items-center justify-between h-20 lg:h-24">
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-[#C9A84C]/5 group-hover:bg-[#C9A84C]/10 transition-colors duration-300">
-              <span className="font-serif text-lg tracking-tighter text-[#C9A84C]">{name.charAt(0)}</span>
+            <img src="/images/my-img.jpg" alt=""  className='h-full w-full rounded-full'/>
+           
             </div>
             <div className="hidden sm:block leading-tight">
               <span className="font-serif text-sm tracking-wide text-white/90 block uppercase">{name}</span>
-              <span className="text-[10px] tracking-[0.25em] uppercase text-[#C9A84C]">Engineer</span>
+              <span className="text-[9px] tracking-[0.25em] capitalize text-[#C9A84C]">Software Engineer</span>
             </div>
           </a>
 
