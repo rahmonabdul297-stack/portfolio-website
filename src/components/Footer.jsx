@@ -11,7 +11,7 @@ export default function Footer({name}) {
       <div className="max-w-7xl mx-auto py-16 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full border border-[#C9A84C]/30 flex items-center justify-center bg-[#C9A84C]/5">
-          <img src="/public/images/my-img.jpg" alt=""  className='h-full w-full rounded-full'/>
+          <img src="/images/my-img.jpg" alt=""  className='h-full w-full rounded-full'/>
           </div>
           <span className="font-serif text-sm text-white/90 uppercase">{name}</span>
         </div>
