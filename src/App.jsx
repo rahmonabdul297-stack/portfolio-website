@@ -41,6 +41,7 @@ const name = "Abdulrahmon yekini"
       <Work />
       <Experience />
       <Contact />
+<AdBlock/>
       <Footer name={name} />
     </div>
   )
