@@ -36,13 +36,13 @@ const name = "Abdulrahmon yekini"
          </div>
       <Navigation name={name} />
       <Hero name={name} />
+      <AdBlock/>
       <SkillsMarquee />
       <About name={name}/>
       <Expertise />
       <Work />
       <Experience />
       <Contact />
-<AdBlock/>
       <Footer name={name} />
     </div>
   )
