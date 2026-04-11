@@ -81,6 +81,7 @@ export default function Work() {
             <a
               key={p.title}
               href={p.href}
+              target='blank'
               className="scroll-reveal group block"
               style={p.delay ? { transitionDelay: p.delay } : undefined}
             >
