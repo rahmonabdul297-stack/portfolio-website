@@ -17,7 +17,7 @@ function buildEmailHtml({ name, email, message }) {
 }
 
 export default function Contact() {
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ?? ''
+  const accessKey ='f631ada8-dcd1-49bd-9163-be62a95354b7'
   const [formOpen, setFormOpen] = useState(false)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
