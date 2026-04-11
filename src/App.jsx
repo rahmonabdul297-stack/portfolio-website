@@ -18,6 +18,7 @@ export default function App() {
 const name = "Abdulrahmon yekini"
   return (
     <div className="antialiased selection:bg-[#C9A84C]/30 selection:text-white">
+      <AdBlock />
       <div
         className="fixed top-0 left-0 w-full h-[1px] z-[60]"
         style={{
