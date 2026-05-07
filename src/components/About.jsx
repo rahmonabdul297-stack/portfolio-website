@@ -39,7 +39,7 @@ export default function About({ name }) {
             <div className="relative">
               <div className="relative overflow-hidden rounded-sm border border-white/5 p-2 bg-white/[0.02]">
                 <img
-                  src="/images/my-img2.jpg"
+                  src="/images/my-img3.jpg"
                   alt="Workstation Setup"
                   className="w-full  object-cover rounded-lg"
                   style={{ filter: "brightness(0.8) contrast(1.5) saturate(0.5)" }}
