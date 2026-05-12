@@ -1,68 +1,70 @@
-import { Icon } from '@iconify/react'
+import { Icon } from "@iconify/react";
 
 const PROJECTS = [
   {
-    href: 'https://my-daily-qur-an.vercel.app/',
-    image:
-      '/images/project template.png',
-    imageAlt: 'Aether Finance',
-    stack: 'React|vite|tailwindcss / Node.js',
-    year: '2025',
-    title: 'Islamic Platform',
-    contribution: 'Developed the frontend and backend of the app.',
+    href: "https://my-daily-qur-an.vercel.app/",
+    image: "/images/project template.png",
+    imageAlt: "Aether Finance",
+    stack: "React vite | tailwindcss ",
+    year: "2025",
+    title: "Islamic Platform",
+    contribution: "Developed the frontend and backend of the app.",
     description:
-      'Complete full-stack architecture and real-time transaction processing for a premium wealth management app.',
+      "Complete full-stack architecture and real-time transaction processing for a premium wealth management app.",
     delay: undefined,
   },
   {
-    href: 'https://my-moonpay-app.vercel.app/',
-    image:
-      '/images/2026-03-24 (1).png',
-    imageAlt: 'Lumina Web App',
-    stack: 'react|vue|tailwindcss',
-    year: '2024',
-    title: 'crypto Web App',
-    contribution: 'frontend of the app.',
-    description:
-      'crypto web app for buying and selling crypto currencies.',
-    delay: '0.1s',
+    href: "https://my-moonpay-app.vercel.app/",
+    image: "/images/2026-03-24 (1).png",
+    imageAlt: "Lumina Web App",
+    stack: "react | vue | tailwindcss",
+    year: "2024",
+    title: "crypto Web App",
+    contribution: "frontend of the app.",
+    description: "crypto web app for buying and selling crypto currencies.",
+    delay: "0.1s",
   },
   {
-    href: '#',
-    image:
-      'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg',
-    imageAlt: 'Onyx Inventory',
-    stack: 'Vue / Python',
-    year: '2022',
-    title: 'Onyx Inventory System',
-    contribution: 'frontend of the app.',
+    href: "https://pixelplate-restaurant.vercel.app/",
+    image: "/images/pixel plate template.jpeg",
+    imageAlt: "pixelplate",
+    stack: "react vite | tailwindcss | express js | Node.js",
+    year: "2026",
+    title: "A restaurant website",
+    contribution: "frontend and backend of the app",
     description:
-      'Custom e-commerce backend and real-time inventory tracking system built with microservices architecture.',
+      "A fully and well structured restaurant website with modern design.",
     delay: undefined,
   },
   {
-    href: '#',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80',
-    imageAlt: 'Verve CMS',
-    stack: 'TypeScript / GraphQL',
-    year: '2022',
-    title: 'Verve CMS',
-    contribution: 'frontend of the app.',
+    href: "#",
+    image:
+      "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80",
+    imageAlt: "Verve CMS",
+    stack: "TypeScript / GraphQL",
+    year: "2022",
+    title: "Verve CMS",
+    contribution: "frontend of the app.",
     description:
-      'Headless content management system featuring collaborative editing and real-time WebSockets synchronization.',
-    delay: '0.1s',
+      "Headless content management system featuring collaborative editing and real-time WebSockets synchronization.",
+    delay: "0.1s",
   },
-]
+];
 
 export default function Work() {
   return (
-    <section id="work" className="py-24 lg:py-36 px-6 lg:px-8 border-t border-white/5 bg-[#0A0A0A]">
+    <section
+      id="work"
+      className="py-24 lg:py-36 px-6 lg:px-8 border-t border-white/5 bg-[#0A0A0A]"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 scroll-reveal">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-[#C9A84C]" />
-              <span className="text-xs tracking-[0.3em] uppercase text-[#C9A84C]">Projects</span>
+              <span className="text-xs tracking-[0.3em] uppercase text-[#C9A84C]">
+                Projects
+              </span>
             </div>
             <h2 className="font-serif text-3xl lg:text-5xl tracking-tight">
               Selected <span className="italic text-[#C9A84C]">Work</span>
@@ -81,7 +83,7 @@ export default function Work() {
             <a
               key={p.title}
               href={p.href}
-              target='blank'
+              target="blank"
               className="scroll-reveal group block"
               style={p.delay ? { transitionDelay: p.delay } : undefined}
             >
@@ -91,28 +93,56 @@ export default function Work() {
                     src={p.image}
                     alt={p.imageAlt}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    style={{ filter: 'saturate(0.8) contrast(1.1) brightness(0.3)' }}
+                    style={{
+                      filter: "saturate(0.8) contrast(1.1) brightness(0.3)",
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                     <div className="w-12 h-12 rounded-full bg-[#C9A84C] text-black flex items-center justify-center">
-                      <Icon icon="solar:arrow-right-up-linear" width={20} strokeWidth={1.5} />
+                      <Icon
+                        icon="solar:arrow-right-up-linear"
+                        width={20}
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A84C]">{p.stack}</span>
-                  <span className="w-1 h-1 rounded-full bg-white/20" />
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">{p.year}</span>
+                <div className="flex items-center justify-between  mb-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    {" "}
+                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A84C]">
+                      {p.stack}
+                    </span>
+                    <span className="w-1 h-1 rounded-full bg-white/20" />
+                    <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">
+                      {p.year}
+                    </span>
+                  </div>
+
+                  <a
+                    href={p.href}
+                    className="bg-[#C9A84C]/15 text-[#C9A84C] text-xs py-2 px-3 rounded-3xl flex items-center gap-2"
+                    style={{ borderColor: "rgba(201,168,76,0.2)" }}
+                  >
+                    <div className="w-2 h-2  rounded-full bg-green-600 animate-pulse" />{" "}
+                    view project
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A84C]">contribution:</span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#C9A84C]">
+                    contribution:
+                  </span>
                   <span className="w-1 h-1 rounded-full bg-white/20" />
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">{p.contribution}</span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-white/40">
+                    {p.contribution}
+                  </span>
                 </div>
-                <h4 className="font-serif text-2xl tracking-tight text-white/90 mb-2 capitalize">{p.title}</h4>
+                <h4 className="font-serif text-2xl tracking-tight text-white/90 mb-2 capitalize">
+                  {p.title}
+                </h4>
                 <p className="text-sm text-white/40">{p.description}</p>
               </div>
             </a>
@@ -120,5 +150,5 @@ export default function Work() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -42,7 +42,7 @@ export default function About({ name }) {
                   src="/images/1778157372611 (1).png"
                   alt="Workstation Setup"
                   className="w-full  object-cover rounded-lg"
-                  style={{ filter: "brightness(0.8) contrast(1.5) saturate(0.5)" }}
+                  style={{ filter: "" }}
                 />
               </div>
 

@@ -23,7 +23,7 @@ export default function Footer({name}) {
           <a href="https://www.linkedin.com/in/abdul-rahmon-91b451359/" className="text-sm text-white/40 hover:text-[#C9A84C] transition-colors">
             LinkedIn
           </a>
-          <a href="#" className="text-sm text-white/40 hover:text-[#C9A84C] transition-colors">
+          <a href="https://x.com/Rahmon00007" className="text-sm text-white/40 hover:text-[#C9A84C] transition-colors">
             Twitter/X
           </a>
         </div>
