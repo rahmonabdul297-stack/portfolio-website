@@ -49,10 +49,10 @@ export default function Hero({name}) {
         </div>
 
         <h1
-          className="font-serif text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-8 animate-fade-in-up"
+          className="font-serif text-2xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-8 animate-fade-in-up"
           style={{ animationDelay: '0.4s', opacity: 0 }}
         >
-      Hi, I'm <span className="nameAnimation text-3xl md:text-5xl lg:text-6xl ">{name}</span>,
+      Hi, I'm <span className="nameAnimation text-2xl md:text-5xl lg:text-6xl ">{name}</span>,
          </h1>
         <p
           className="text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mb-12 animate-fade-in-up text-white/50"

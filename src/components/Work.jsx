@@ -4,7 +4,7 @@ const PROJECTS = [
   {
     href: "https://my-daily-qur-an.vercel.app/",
     image: "/images/project template.png",
-    imageAlt: "Aether Finance",
+    imageAlt: "=",
     stack: "React vite | tailwindcss ",
     year: "2025",
     title: "Islamic Platform",
@@ -16,7 +16,7 @@ const PROJECTS = [
   {
     href: "https://my-moonpay-app.vercel.app/",
     image: "/images/2026-03-24 (1).png",
-    imageAlt: "Lumina Web App",
+    imageAlt: "=",
     stack: "react | vue | tailwindcss",
     year: "2024",
     title: "crypto Web App",
@@ -28,7 +28,7 @@ const PROJECTS = [
     href: "https://pixelplate-restaurant.vercel.app/",
     image: "/images/pixel plate template.jpeg",
     imageAlt: "pixelplate",
-    stack: "react vite | tailwindcss | express js | Node.js",
+    stack: "react vite | tailwindcss | express js",
     year: "2026",
     title: "A restaurant website",
     contribution: "frontend and backend of the app",
@@ -37,16 +37,16 @@ const PROJECTS = [
     delay: undefined,
   },
   {
-    href: "#",
+    href: "https://school-portal-peach.vercel.app/",
     image:
-      "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&q=80",
-    imageAlt: "Verve CMS",
-    stack: "TypeScript / GraphQL",
-    year: "2022",
-    title: "Verve CMS",
-    contribution: "frontend of the app.",
+      "/images/2026-06-02.png",
+    imageAlt: "",
+    stack: "Next Js | tailwindcss ",
+    year: "2026",
+    title: "Modern school portal",
+    contribution: "frontend and backend of the app",
     description:
-      "Headless content management system featuring collaborative editing and real-time WebSockets synchronization.",
+      "A modern school portal for managing student result,result entry and details of the school in general.",
     delay: "0.1s",
   },
 ];
