@@ -6,7 +6,7 @@ import Expertise from './components/Expertise'
 import Work from './components/Work'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
-import AdBlock from './components/Ads'
+
 import Footer from './components/Footer'
 import { useScrollReveal } from './hooks/useScrollReveal'
 import { FaAngleDoubleUp } from 'react-icons/fa'
@@ -18,7 +18,7 @@ export default function App() {
 const name = "Abdulrahmon yekini"
   return (
     <div className="antialiased selection:bg-[#C9A84C]/30 selection:text-white">
-      <AdBlock />
+     
       <div
         className="fixed top-0 left-0 w-full h-[1px] z-[60]"
         style={{
