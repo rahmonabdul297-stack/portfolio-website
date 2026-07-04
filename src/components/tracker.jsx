@@ -7,7 +7,7 @@ export default function VisitTracker() {
 
     const sendNotification = async () => {
       const formData = new FormData();
-      formData.append('access_key', import.meta.env.VITE_WEB3FORMS_TEMPLATE_ID);
+      formData.append('access_key','f35c5188-c9ac-4eff-b2fa-c8c36a7d666d');
       formData.append('subject', `New visitor on ${window.location.pathname}`);
       formData.append('name', 'Portfolio Tracker');
       formData.append('email', 'noreply@yourdomain.com'); // Web3Forms requires an email field
