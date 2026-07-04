@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-
-export function useScrollReveal() {
+export default function useScrollReveal() {
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -24,3 +23,7 @@ export function useScrollReveal() {
     return () => observer.disconnect()
   }, [])
 }
+
+
+
+
