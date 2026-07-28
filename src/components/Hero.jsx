@@ -8,7 +8,7 @@ export default function Hero({ name }) {
           src="/images/my-office.jpg"
           alt="Abstract Architecture"
           className="w-full h-screen object-cover animate-slow-zoom"
-          style={{ filter: "brightness(0.5) contrast(1.2) saturate(0.5)" }}
+          style={{ filter: "brightness(0.8) contrast(1.1) " }}
         />
         <div
           className="absolute inset-0"
@@ -35,35 +35,10 @@ export default function Hero({ name }) {
       />
 
       <div className="relative z-10 max-w-5xl text-center mx-auto lg:mx-0 lg:text-start pt-24 pl-14">
-        <div
-          className="animate-fade-in mb-8"
-          style={{ animationDelay: "0.2s", opacity: 0 }}
-        >
-          <div
-            className="inline-flex items-center gap-3 px-5 py-2 rounded-full border "
-            style={{
-              borderColor: "rgba(201,168,76,0.2)",
-              background: "rgba(201,168,76,0.03)",
-            }}
-          >
-            <span
-              className="text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase"
-              style={{ color: "#C9A84C" }}
-            >
-              active
-            </span>
-            <div className="w-2 h-2  rounded-full bg-green-600 animate-pulse" />
-            <span
-              className="text-[10px] md:text-xs font-medium tracking-[0.3em] uppercase"
-              style={{ color: "#C9A84C" }}
-            >
-              Full-Stack Software Engineer
-            </span>
-          </div>
-        </div>
+        
 
         <h1
-          className="font-serif text-2xl sm:text-6xl lg:text-4xl tracking-tight leading-[1.1] mb-8 animate-fade-in-up"
+          className="font-serif text-[#fff] text-2xl sm:text-6xl lg:text-4xl tracking-tight leading-[1.1] mb-8 animate-fade-in-up"
           style={{ animationDelay: "0.4s", opacity: 0 }}
         >
           Hi, I'm{" "}
@@ -88,10 +63,10 @@ export default function Hero({ name }) {
         >
           <a
             href="#work"
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] w-full sm:w-auto justify-center"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full text-xs tracking-[0.2em] uppercase transition-all duration-300 hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] w-full sm:w-auto justify-center border border-[var(--primary)]"
             style={{
-              background: "linear-gradient(135deg, #C9A84C, #E8D48B, #C9A84C)",
-              color: "#0A0A0A",
+              background: "#000",
+              color: "#fff",
             }}
           >
             View Selected Work
@@ -104,7 +79,7 @@ export default function Hero({ name }) {
           </a>
           <a
             href="https://wa.me/2347089136508"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-xs tracking-[0.2em] uppercase border transition-all duration-300 hover:bg-white/5 w-full sm:w-auto justify-center"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-xs text-[#fff] tracking-[0.2em] uppercase border transition-all duration-300 hover:bg-white/5 w-full sm:w-auto justify-center"
             style={{ borderColor: "rgba(255,255,255,0.15)" }}
           >
             contact me

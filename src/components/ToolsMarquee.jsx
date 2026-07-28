@@ -1,12 +1,16 @@
 import { Fragment } from "react";
 
 const ITEMS = [
-  "System Architecture",
-  "Frontend Engineering",
-  "API Design",
-  "Cloud Infrastructure",
-  "Database Management",
-  "DevOps",
+  "Node Js",
+  "Mongo DB",
+  "React",
+  "Next",
+  "Vue",
+  "Express",
+  "JavaScript",
+  "TypeScript",
+  "HTML",
+  "Tailwind",
 ];
 
 function MarqueeSegments({ id }) {
@@ -24,7 +28,7 @@ function MarqueeSegments({ id }) {
   );
 }
 
-export default function SkillsMarquee() {
+export default function  ToolsMarquee() {
   return (
     <div
       className="py-6 border-y overflow-hidden relative"

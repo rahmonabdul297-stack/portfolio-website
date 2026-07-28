@@ -5,22 +5,22 @@ export default function About({ name }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           <div className="lg:col-span-7 scroll-reveal">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-px bg-[#C9A84C]" />
-              <span className="text-xs tracking-[0.3em] uppercase text-[#C9A84C]">
+              <div className="w-8 h-px bg-[var(--others)]" />
+              <span className="text-xs tracking-[0.3em] uppercase text-[var(--others)] font-bold">
                 About Me
               </span>
             </div>
             <h2 className="font-serif text-3xl lg:text-5xl tracking-tight leading-tight mb-8">
               Engineering with <br />
-              <span className="italic text-[#C9A84C]">Scalability</span> &
+              <span className="italic text-[var(--others)]">Scalability</span> &
               Clarity
             </h2>
-            <div className="space-y-6 text-base leading-relaxed text-white/50">
+            <div className="space-y-6 text-base leading-relaxed text-black">
               <p>
                 I am a full-stack software engineer with over two years of
                 experience helping companies architect and scale complex digital
                 products. My approach is rooted in the belief that great code is
-                maintainable—it solves complex business logic while remaining
+                maintainable,it solves complex business logic while remaining
                 highly performant.
               </p>
               <p>
@@ -39,17 +39,17 @@ export default function About({ name }) {
             <div className="relative">
               <div className="relative overflow-hidden rounded-sm border border-white/5 p-2 bg-white/[0.02]">
                 <img
-                  src="/images/1778157372611 (1).png"
+                  src="/images/my-img2.jpg"
                   alt="Workstation Setup"
                   className="w-full  object-cover rounded-lg"
-                  style={{ filter: "" }}
+                  style={{ filter: "contrast(1.2) brightness(0.4) sepia(10%)" }}
                 />
               </div>
 
               <div className="absolute bottom-6 left-0 right-0 px-8">
                 <div className="grid grid-cols-2 gap-6 divide-x divide-white/10">
                   <div className="text-center px-4">
-                    <span className="font-serif text-3xl tracking-tight block text-[#C9A84C] mb-1">
+                    <span className="font-serif text-3xl tracking-tight block text-[var(--primary)] mb-1">
                       2+
                     </span>
                     <p className="text-[10px]  tracking-[0.2em] uppercase text-white/70">
@@ -57,7 +57,7 @@ export default function About({ name }) {
                     </p>
                   </div>
                   <div className="text-center px-4">
-                    <span className="font-serif text-3xl tracking-tight block text-[#C9A84C] mb-1">
+                    <span className="font-serif text-3xl tracking-tight block text-[var(--primary)] mb-1">
                       10+
                     </span>
                     <p className="text-[10px] tracking-[0.2em] uppercase text-white/70">
@@ -67,12 +67,15 @@ export default function About({ name }) {
                 </div>
               </div>
 
-              <div className="absolute -top-3 -right-3 w-12 h-12 border-t border-r border-[#C9A84C]/40" />
-              <div className="absolute -bottom-3 -left-3 w-12 h-12 border-b border-l border-[#C9A84C]/40" />
+              <div className="absolute -top-3 -right-3 w-12 h-12 border-t-2 border-r-2 border-[var(--neutral)] rounded-2xl" />
+              <div className="absolute -bottom-3 -left-3 w-12 h-12 border-b-2 border-l-2 border-[var(--neutral)] rounded-2xl" />
             </div>
-            <div className=" text-[#C9A84C] text-sm mt-4 uppercase">
-              <div className="font-serif"> engr. {name}</div>
-              <div className="text-xs capitalize text-white/50"> software engineer</div>
+            <div className=" text-[var(--neutral)] text-sm mt-4 uppercase">
+              <div className="font-serif">{name}</div>
+              <div className="text-xs capitalize text-[var(--others)]">
+                {" "}
+                software engineer
+              </div>
             </div>
           </div>
         </div>

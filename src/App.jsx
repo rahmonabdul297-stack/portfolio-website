@@ -13,17 +13,18 @@ import { FaAngleDoubleUp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import VisitTracker from "./components/tracker";
 import useScrollReveal from "./hooks/useScrollReveal";
+import ToolsMarquee from "./components/ToolsMarquee";
 export default function App() {
   useScrollReveal();
   const name = "Abdulrahmon yekini";
 
   return (
-    <div className="antialiased selection:bg-[#C9A84C]/30 selection:text-white">
+    <div className="antialiased selection:bg-[#F1E7D6]/30 selection:text-white">
       <div
         className="fixed top-0 left-0 w-full h-[1px] z-[60]"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, #C9A84C 50%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, #F1E7D6 50%, transparent 100%)",
           opacity: 0.6,
         }}
       />
@@ -31,7 +32,7 @@ export default function App() {
         <a href="#">
           <FaAngleDoubleUp
             size={20}
-            className="fixed bottom-20 right-7 lg:right-12  z-50 text-[#C9A84C] mb-2 animate-bounce"
+            className="fixed bottom-20 right-7 lg:right-12  z-50 text-[#F1E7D6] mb-2 animate-bounce"
           />
         </a>
         <a
@@ -48,6 +49,7 @@ export default function App() {
       <SkillsMarquee />
       <About name={name} />
       <Expertise />
+      <ToolsMarquee/>
       <Work />
       <Experience />
       <Contact />

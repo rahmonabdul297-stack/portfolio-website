@@ -3,23 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --gold: #c9a84c;
-  --gold-light: #e8d48b;
-  --deep-black: #0a0a0a;
+  --primary: #f1e7d6;
+  --secondary: #f1e7d6;
+  --neutral: #0e1045;
+  --others: #525252;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--deep-black);
-  color: white;
+  font-family: "Inter", sans-serif;
+  background-color: var(--primary);
+  color: var(--neutral);
   font-weight: 300;
 }
 
 .font-serif {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
 }
-
 
 @keyframes fadeInUp {
   from {
@@ -97,40 +97,40 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c9a84c;
+  background: #f1e7d6;
   border-radius: 2px;
 }
 
 .nav-scrolled {
-  background: rgba(10, 10, 10, 0.95) !important;
+  background: #020223 !important;
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(201, 168, 76, 0.15) !important;
 }
 
-
-.nameAnimation{
+.nameAnimation {
   text-transform: uppercase;
   animation: color 1s linear infinite;
 }
 
 @keyframes color {
-  0%{ background: linear-gradient(to right,black,#e8d48b);
-        -webkit-background-clip:text;
-  -webkit-text-fill-color: transparent;
+  0% {
+    background: linear-gradient(to right, black, #e8d48b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  50%{
-      background: linear-gradient(to right ,#e8d48b,white,#e8d48b);
-        -webkit-background-clip:text;
-  -webkit-text-fill-color: transparent;
+  50% {
+    background: linear-gradient(to right, #e8d48b, white, #e8d48b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-   100%{
-      background: linear-gradient(to right,#e8d48b,black);
-        -webkit-background-clip:text;
-  -webkit-text-fill-color: transparent;
+  100% {
+    background: linear-gradient(to right, #e8d48b, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 button {
-  @apply bg-[#C9A84C] text-black px-4 py-2 rounded-md;
+  @apply bg-[#F1E7D6] text-black px-4 py-2 rounded-md;
 }
 
 @layer components {
@@ -138,13 +138,13 @@ button {
     @apply block text-left text-[11px] font-medium tracking-[0.14em] uppercase text-white/45 mb-2;
   }
 
-  .contact-form input:not([type='checkbox']):not([type='radio']),
+  .contact-form input:not([type="checkbox"]):not([type="radio"]),
   .contact-form textarea {
     @apply w-full rounded-lg border border-white/10 bg-[#0a0a0a]/90 px-4 py-3.5 text-[15px] font-light leading-snug text-white/95 shadow-inner shadow-black/20;
     @apply placeholder:text-white/35 placeholder:font-light;
     @apply transition-[border-color,box-shadow,background-color] duration-200 ease-out;
     @apply outline-none hover:border-white/20 hover:bg-[#0a0a0a];
-    @apply focus:border-[#C9A84C] focus:bg-[#080808] focus:ring-2 focus:ring-[#C9A84C] focus:ring-opacity-20;
+    @apply focus:border-[#F1E7D6] focus:bg-[#080808] focus:ring-2 focus:ring-[#F1E7D6] focus:ring-opacity-20;
   }
 
   .contact-form textarea {
@@ -152,48 +152,48 @@ button {
   }
 }
 
-.anim{
-    height:100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.anim {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.circle{
-    position: absolute;
-    background: transparent;
-    width: calc(var(--i)*2.5vmin);
-    aspect-ratio:1;
-    border-radius: 50%;
-    border: 3px solid #c9a84c;
-    transform-style: preserve-3d;
-    transform: rotateX(70deg) translateZ(50px);
-    animation: move 3s ease-in-out calc(var(--i)*0.08s) infinite;
-    box-shadow: 0 0 15px #c9a84c, inset 0 0 15px #c9a84c;
+.circle {
+  position: absolute;
+  background: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid #f1e7d6;
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow:
+    0 0 15px #f1e7d6,
+    inset 0 0 15px #f1e7d6;
 }
 
 @keyframes move {
-    0%,
-    100%{
-        transform:rotateX(70deg) translateZ(100px) translateY(0);
-        filter:hue-rotate(0);
-    }
-    50%{
-        transform: rotateX(60deg) translateZ(40px) translateY(100px);
-    }
+  0%,
+  100% {
+    transform: rotateX(70deg) translateZ(100px) translateY(0);
+    filter: hue-rotate(0);
+  }
+  50% {
+    transform: rotateX(60deg) translateZ(40px) translateY(100px);
+  }
 }
 
-.OctAnim{
+.OctAnim {
   animation: y-axis 3s infinite;
   z-index: 1;
 }
-@keyframes y-axis  {
-    0%,
-    100%{
-        transform:translateY(0px);
-       
-    }
-     50%{
-        transform: translateZ(40px) translateY(90px);
-    }
-    
+@keyframes y-axis {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateZ(40px) translateY(90px);
+  }
 }

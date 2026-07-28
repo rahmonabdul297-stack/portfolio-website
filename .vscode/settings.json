@@ -1,0 +1,4 @@
+{
+  "chat.agent.sandbox.enabled": "on",
+  "chat.agent.maxRequests": 100
+}
