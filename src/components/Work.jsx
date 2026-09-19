@@ -2,15 +2,16 @@ import { Icon } from "@iconify/react";
 
 const PROJECTS = [
   {
-    href: "https://my-daily-qur-an.vercel.app/",
-    image: "/images/project template.png",
-    imageAlt: "=",
-    stack: "React vite | tailwindcss ",
-    year: "2025",
-    title: "Islamic Platform",
-    contribution: "Developed the frontend and backend of the app.",
+    href: "https://travel-agency-tawny-three.vercel.app/",
+    image: "/images/pro-img.png",
+    imageAlt: "Excellent Travel Agency Website Preview",
+    stack: "React | Vite | Tailwind CSS",
+    year: "2026",
+    title: "Excellent Travel Agency",
+    contribution:
+      "Designed and developed the complete frontend interface, interactive booking workflows, responsive multi-language layout, and lead capture integration.",
     description:
-      "Complete full-stack architecture and real-time transaction processing for a premium wealth management app.",
+      "A modern travel agency web application featuring domestic and international flight ticketing, hotel reservations, student visa assistance, and Umrah packages with multi-language support and interactive inquiry forms.",
     delay: undefined,
   },
   {
