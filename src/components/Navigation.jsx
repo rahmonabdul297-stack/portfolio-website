@@ -68,7 +68,7 @@ export default function Navigation({ name }) {
                 color: "var(--primary)",
               }}
             >
-              Start a Project
+              Hire me
             </a>
             <button
               type="button"
