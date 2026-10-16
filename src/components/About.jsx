@@ -20,7 +20,7 @@ export default function About({ name }) {
 
             <div className="space-y-6 text-base lg:text-lg leading-relaxed text-slate-300 font-light">
               <p>
-                I am a full-stack software engineer with over two years of experience helping companies architect and scale complex digital products. My approach is rooted in the belief that great code is maintainable—it solves complex business logic while remaining highly performant.
+                I am a full-stack software engineer with over two years of experience that scale complex digital products. My approach is rooted in the belief that great code is maintainable, it solves complex business logic while remaining highly performant.
               </p>
               <p>
                 From developing robust APIs and microservices to crafting responsive, state-driven user interfaces, I navigate the entire web stack. I believe in clean architecture that speaks volumes and systems that scale effortlessly.
@@ -70,7 +70,7 @@ export default function About({ name }) {
 
             {/* Caption / Title Sub-tag */}
             <div className="mt-6 px-2">
-              <div className="font-serif text-slate-200 text-base">{name}</div>
+              <div className="font-serif text-slate-200 text-base uppercase">{name}</div>
               <div className="text-xs uppercase tracking-wider text-[var(--primary)] font-mono mt-0.5">
                 Full-Stack Software Engineer
               </div>

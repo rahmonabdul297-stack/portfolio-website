@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
 const PROJECTS = [
@@ -15,14 +15,14 @@ const PROJECTS = [
       "A modern travel agency web application featuring domestic and international flight ticketing, hotel reservations, student visa assistance, and Umrah packages with multi-language support and interactive inquiry forms.",
   },
   {
-    href: "https://en-cbt.vercel.app/",
-    image: "/images/cbt site.png",
-    imageAlt: "CBT Web App Preview",
-    stack: "Next.js | Tailwind CSS",
+    href: "https://nokata-ten.vercel.app/",
+    image: "/images/Screenshot 2026-10-16 113352.png",
+    imageAlt: "Ecommerce web application",
+    stack: "React.js | Express.js",
     year: "2026",
-    title: "CBT Web App",
-    contribution: "frontend of the app.",
-    description: "A fully and well structured CBT website with modern design.",
+    title: "Ecommerce web application",
+    contribution: "Fullstack",
+    description: "A modern full-stack e-commerce platform dedicated to delivering 100% authentic smartphones, heavy-duty power banks, and premium mobile accessories across Nigeria. Built with a lightning-fast React frontend and a robust Node.js backend, Nokata offers a seamless shopping experience powered by secure Paystack checkout",
   },
   {
     href: "https://pixelplate-restaurant.vercel.app/",
@@ -46,55 +46,83 @@ const PROJECTS = [
     description:
       "A modern school portal for managing student result, result entry and details of the school in general.",
   },
+  {
+    href: "https://lagos-island-pilots.vercel.app/",
+    image: "/images/lagosislandbanner.png",
+    imageAlt: "School Bus Shuttle Preview",
+    stack: "Next.js | Tailwind CSS",
+    year: "2026",
+    title: "School Bus Shuttle portal",
+    contribution: "frontend and backend of the app",
+    description:
+      "A modern school bus shuttle portal for managing student transport.",
+  },
 ];
 
 export default function Work() {
   const scrollRef = useRef(null);
 
+  // Manual scroll helper
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
+      const { clientWidth } = scrollRef.current;
       const offset = direction === "left" ? -clientWidth / 2 : clientWidth / 2;
       scrollRef.current.scrollBy({ left: offset, behavior: "smooth" });
     }
   };
 
+  // Auto-sliding effect
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const interval = setInterval(() => {
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        container.scrollBy({ left: container.clientWidth / 2, behavior: "smooth" });
+      }
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="work"
-      className="py-24 lg:py-36 px-6 lg:px-8 border-t border-white/5 bg-[var(--primary)] overflow-hidden"
+      className="py-20 sm:py-24 lg:py-36 px-4 sm:px-6 lg:px-8 border-t border-white/5 bg-[var(--primary)] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header & Navigation Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-px bg-[var(--others)]" />
               <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[var(--others)]">
                 Projects
               </span>
             </div>
-            <h2 className="font-serif text-3xl lg:text-5xl tracking-tight text-white">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white">
               Selected <span className="italic text-[var(--others)]">Work</span>
             </h2>
           </div>
 
-          <div className="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto">
+          <div className="flex items-center justify-between md:justify-end gap-4 w-full md:w-auto">
             {/* Carousel Arrow Buttons */}
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               <button
                 onClick={() => scroll("left")}
                 aria-label="Previous slide"
-                className="w-12 h-12 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white transition-colors duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white transition-colors duration-300"
               >
-                <Icon icon="solar:arrow-left-linear" width={20} />
+                <Icon icon="solar:arrow-left-linear" width={18} />
               </button>
               <button
                 onClick={() => scroll("right")}
                 aria-label="Next slide"
-                className="w-12 h-12 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white transition-colors duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-white transition-colors duration-300"
               >
-                <Icon icon="solar:arrow-right-linear" width={20} />
+                <Icon icon="solar:arrow-right-linear" width={18} />
               </button>
             </div>
 
@@ -109,25 +137,25 @@ export default function Work() {
           </div>
         </div>
 
-        {/* Sliding Carousel Container */}
+        {/* Sliding Carousel Container with Responsive Padding & Gaps */}
         <div
           ref={scrollRef}
-          className="flex gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-8 pt-2"
+          className="flex gap-5 sm:gap-8 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 pt-2"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {PROJECTS.map((p, idx) => (
             <div
               key={idx}
-              className="min-w-[85%] sm:min-w-[48%] lg:min-w-[42%] snap-start flex flex-col justify-between p-6 bg-black/10 rounded-3xl border border-black/10 backdrop-blur-sm transition-all duration-500 hover:bg-black/20"
+              className="min-w-[90%] sm:min-w-[48%] lg:min-w-[42%] snap-start flex flex-col justify-between p-5 sm:p-6 bg-black/10 rounded-2xl sm:rounded-3xl border border-black/15 backdrop-blur-sm transition-all duration-500 hover:bg-black/20 shadow-sm"
             >
               <div>
                 <a
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block mb-6"
+                  className="group block mb-5 sm:mb-6"
                 >
-                  <div className="relative overflow-hidden rounded-2xl aspect-[16/10] bg-black/40 border border-black/10">
+                  <div className="relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[16/10] bg-black/40 border border-black/10">
                     <img
                       src={p.image}
                       alt={p.imageAlt}
@@ -137,10 +165,10 @@ export default function Work() {
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                      <div className="w-12 h-12 rounded-full bg-[var(--primary)] text-black flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[var(--primary)] text-black flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                         <Icon
                           icon="solar:arrow-right-up-linear"
-                          width={20}
+                          width={18}
                           strokeWidth={1.5}
                         />
                       </div>
@@ -148,34 +176,34 @@ export default function Work() {
                   </div>
                 </a>
 
-                <div className="space-y-4">
-                  <h4 className="font-serif text-2xl tracking-tight text-black uppercase font-bold">
+                <div className="space-y-3">
+                  <h4 className="font-serif text-xl sm:text-2xl tracking-tight text-black uppercase font-bold">
                     {p.title}
                   </h4>
-                  <p className="text-sm text-black/70 leading-relaxed font-light line-clamp-3">
+                  <p className="text-xs sm:text-sm text-black/75 leading-relaxed font-light line-clamp-3">
                     {p.description}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-black/10 space-y-4">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-black/80 font-bold font-mono">
+              <div className="pt-5 mt-5 border-t border-black/10 space-y-3 sm:space-y-4">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-black/80 font-bold font-mono truncate max-w-[65%]">
                     {p.stack}
                   </span>
                   <a
                     href={p.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-black text-[var(--primary)] text-xs py-2 px-4 rounded-full flex items-center gap-2 font-medium transition-transform duration-300 hover:scale-105"
+                    className="bg-black text-[var(--primary)] text-[11px] sm:text-xs py-2 px-3 sm:px-4 rounded-full flex items-center gap-1.5 font-medium transition-transform duration-300 hover:scale-105 shrink-0"
                   >
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     Live Demo
                   </a>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs">
-                  <span className="tracking-[0.15em] uppercase text-black/60 font-medium">
+                <div className="flex items-center gap-2 text-[11px] sm:text-xs">
+                  <span className="tracking-[0.15em] uppercase text-black/60 font-medium shrink-0">
                     Contribution:
                   </span>
                   <span className="capitalize text-black/90 font-light truncate">
