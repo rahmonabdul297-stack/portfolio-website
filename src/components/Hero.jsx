@@ -3,13 +3,10 @@ import { Icon } from "@iconify/react";
 export default function Hero({ name }) {
   return (
     <section className="relative min-h-screen bg-[#0a0f1d] text-white overflow-hidden flex items-center">
-      
       {/* Main Split Layout Container */}
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-screen relative">
-        
         {/* Left Content Area (7 Cols on Desktop, Full on Mobile) */}
         <div className="lg:col-span-7 flex flex-col justify-center px-6 sm:px-12 lg:pl-24 lg:pr-16 py-28 lg:py-24 z-20 lg:border-r-[30px] border-[#f1e7d6]">
-          
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase bg-slate-900/80 border border-slate-800 text-slate-300 w-fit backdrop-blur-sm mb-6">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -18,18 +15,30 @@ export default function Hero({ name }) {
 
           {/* Main Headline */}
           <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] mb-6 text-white">
-            Hi, I'm <span className="text-[var(--primary)] uppercase">{name}</span>.
+            Hi, I'm{" "}
+            <span className="text-[var(--primary)] uppercase">{name}</span>.
           </h1>
 
           {/* Professional Bio */}
           <p className="text-sm sm:text-base lg:text-lg text-slate-300 font-light leading-relaxed max-w-xl mb-8">
-            Full-stack software engineer specializing in scalable web applications, robust backend architectures, and immersive 3D digital experiences. I bridge intuitive frontends with high-performance APIs.
+            Full-stack software engineer specializing in scalable web
+            applications, robust backend architectures, and immersive 3D digital
+            experiences. I bridge intuitive frontends with high-performance
+            APIs.
           </p>
 
           {/* Core Tech Stack Pills */}
           <div className="flex flex-wrap gap-2 mb-8 sm:mb-10">
-            {["React / Next.js", "Node.js & Express", "TypeScript", "MongoDB"].map((tech, idx) => (
-              <span key={idx} className="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-900/90 border border-slate-800 text-slate-300 shadow-sm">
+            {[
+              "React / Next.js",
+              "Node.js & Express",
+              "TypeScript",
+              "MongoDB",
+            ].map((tech, idx) => (
+              <span
+                key={idx}
+                className="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-900/90 border border-slate-800 text-slate-300 shadow-sm"
+              >
                 {tech}
               </span>
             ))}
@@ -72,16 +81,18 @@ export default function Hero({ name }) {
 
           {/* Floating Glass Card Overlapping the Image */}
           <div className="absolute bottom-6 sm:bottom-12 lg:bottom-20 left-6 right-6 sm:left-12 sm:right-12  lg:right-auto lg:w-[400px] z-30 p-6 sm:p-8 rounded-2xl bg-[#0c1222]/90 backdrop-blur-md border border-white/10 shadow-2xl">
-            <h3 className="font-serif text-xl sm:text-2xl text-white mb-2">Full-Stack Architecture</h3>
+            <h3 className="font-serif text-xl sm:text-2xl text-white mb-2">
+              Full-Stack Architecture
+            </h3>
             <p className="text-xs text-[var(--primary)] font-mono mb-2 sm:mb-3">
               React, Next.js, Node.js, Express, TypeScript.
             </p>
             <p className="text-xs text-slate-300 leading-relaxed font-light">
-              Engineered with precision clean code, robust backend services, and scalable performance built for modern web applications.
+              Engineered with precision clean code, robust backend services, and
+              scalable performance built for modern web applications.
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );
