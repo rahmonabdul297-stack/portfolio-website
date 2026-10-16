@@ -6,7 +6,7 @@ const ITEMS = [
     period: "2024 — present",
     periodClass: "text-[#F1E7D6]",
     description:
-      "Building web applications and mobile applications using React Native, React, Node.js, Express, and MongoDB, maintaining and updating the codebase, and deploying the applications to the cloud.",
+      "Building web applications and mobile applications using React,Next js, Node.js, Express, and MongoDB, maintaining and updating the codebase, and deploying the applications to the cloud.",
   },
   {
     active: true,
