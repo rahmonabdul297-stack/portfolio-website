@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import ToolsMarquee from "../components/ToolsMarquee";
-
-export default function HomePage({ name }) {
+const HomePage =({ name }) =>{
   return (
     <main className="pt-20 lg:pt-24">
       <Hero name={name} />
@@ -9,3 +8,4 @@ export default function HomePage({ name }) {
     </main>
   );
 }
+export default HomePage

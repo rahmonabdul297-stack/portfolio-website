@@ -14,6 +14,7 @@ import { FaAngleDoubleUp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import HomePage from "./pages/HomePage";
 
+
 export default function App() {
   useScrollReveal();
   const name = "Abdulrahmon Yekini";
