@@ -58,7 +58,7 @@ export default function App() {
       {/* Dynamic Route Pages */}
       <div className="flex-grow">
         <Routes>
-          <Route path="/" element={<HomePage name={name} />} />
+          {/* <Route path="/" element={<HomePage name={name} />} /> */}
           <Route path="/about" element={<AboutPage name={name} />} />
           <Route path="/expertise" element={<ExpertisePage />} />
           <Route path="/work" element={<WorkPage />} />
