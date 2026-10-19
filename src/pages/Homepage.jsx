@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import SkillsMarquee from "../components/SkillsMarquee";
 import ToolsMarquee from "../components/ToolsMarquee";
 
 export default function HomePage({ name }) {

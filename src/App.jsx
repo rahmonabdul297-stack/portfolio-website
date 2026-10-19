@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import VisitTracker from "./components/tracker";
 import useScrollReveal from "./hooks/useScrollReveal";
 
-import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ExpertisePage from "./pages/ExpertisePage";
 import WorkPage from "./pages/WorkPage";
@@ -13,6 +12,7 @@ import ContactPage from "./pages/ContactPage";
 
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import HomePage from "./pages/homepage";
 
 export default function App() {
   useScrollReveal();
@@ -20,7 +20,6 @@ export default function App() {
 
   return (
     <div className="antialiased selection:bg-[#2C5E3B]/20 selection:text-[#1A1A18] bg-[#FAF7F2] min-h-screen flex flex-col justify-between">
-      
       {/* Top Accent Ambient Line */}
       <div
         className="fixed top-0 left-0 w-full h-[2px] z-[60]"
