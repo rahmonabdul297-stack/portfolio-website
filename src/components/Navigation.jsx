@@ -1,99 +1,89 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { navigationArray } from "./arrays";
+import Logo from "./logo";
 
 export default function Navigation({ name }) {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const [selected, setSelected] = useState(null);
 
   const closeMobile = () => setMenuOpen(false);
-  const [selected, setSelected] = useState(null);
+
   return (
     <nav
       id="mainNav"
-      className={`fixed top-[1px] w-full z-50 transition-all duration-500 ${
-        scrolled ? "nav-scrolled" : "border-transparent"
-      } border-b`}
-      style={{ background: scrolled ? undefined : "transparent" }}
+      className="fixed top-0 w-full z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8E2D9] shadow-[0_10px_30px_rgba(44,94,59,0.06)] overflow-visible"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 lg:h-24 ">
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full border border-[#F1E7D6]/30 flex items-center justify-center  group-hover:bg-[#F1E7D6]/10 transition-colors duration-300">
-              <img
-                src="/images/my-img.jpg"
-                alt=""
-                className="h-full w-full rounded-full"
-              />
-            </div>
-            <div className="hidden sm:block leading-tight">
-              <span className="font-serif text-sm tracking-wide text-white/90 block uppercase">
-                {name}
-              </span>
-              <span className="text-[9px] tracking-[0.25em] capitalize text-[#F1E7D6]">
-                Software Engineer
-              </span>
-            </div>
-          </a>
+      <div className="absolute top-full left-0 right-0 h-16 pointer-events-none overflow-hidden z-[-1]">
+        {/* Left Glow Point (Emerald Soft Ambient) */}
+        <div className="absolute top-0 left-[10%] w-64 h-16 bg-[#2C5E3B]/10 blur-2xl rounded-full transform -translate-y-1/2 pointer-events-none" />
 
-          <div className="hidden lg:flex items-center gap-10">
+        {/* Center Glow Point (Warm White Highlight) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-16 bg-white/80 blur-xl rounded-full transform -translate-y-1/2 pointer-events-none" />
+
+        {/* Right Glow Point (Deep Forest Emerald Shadow Glow) */}
+        <div className="absolute top-0 right-[10%] w-64 h-16 bg-[#15803D]/10 blur-2xl rounded-full transform -translate-y-1/2 pointer-events-none" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 lg:h-24">
+          <Logo name={name} />
+
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center gap-8">
             {navigationArray.map((item) => (
               <a
                 href={item.link}
                 key={item.id}
                 onClick={() => setSelected(item.id)}
+                className="py-2"
               >
-                <div className="hidden lg:flex items-center gap-10">
-                  <span
-                    className={`text-xs tracking-[0.15em] uppercase hover:text-[#F1E7D6] transition-colors duration-300 ${selected === item.id ? "text-[#F1E7D6] border-b border-[#F1E7D6]" : "text-white/60"} py-2`}
-                  >
-                    {item.name}
-                  </span>
-                </div>
+                <span
+                  className={`text-xs tracking-[0.15em] uppercase font-medium transition-colors duration-300 hover:text-[#2C5E3B] ${
+                    selected === item.id
+                      ? "text-[#2C5E3B] border-b-2 border-[#2C5E3B]"
+                      : "text-[#666158]"
+                  }`}
+                >
+                  {item.name}
+                </span>
               </a>
             ))}
           </div>
 
+          {/* Action & Mobile Toggle */}
           <div className="flex items-center gap-4">
             <a
-              href="#contact"
-              className="hidden md:inline-flex items-center gap-2 px-6 py-2.5  text-xs tracking-[0.15em] uppercase transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,168,76,0.2)] rounded-full border border-[var(--secondary)]"
-              style={{
-                background: "#000",
-                color: "var(--primary)",
-              }}
+              href="/contact"
+              className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-300 rounded-full border border-[#2C5E3B] bg-[#2C5E3B] text-white hover:bg-[#234B2F] shadow-sm"
             >
               Hire me
             </a>
+
+            {/* Mobile Hamburger Button */}
             <button
               type="button"
               aria-expanded={menuOpen}
               aria-label="Toggle menu"
               onClick={() => setMenuOpen((o) => !o)}
-              className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
+              className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none rounded-lg border border-[#E8E2D9] bg-white"
             >
               <span
-                className="w-6 h-[1px] bg-black transition-all duration-300 origin-center"
+                className="w-5 h-[2px] bg-[#1A1A18] transition-all duration-300 origin-center"
                 style={
                   menuOpen
-                    ? { transform: "rotate(45deg) translate(2px, 2px)" }
+                    ? { transform: "rotate(45deg) translate(2.5px, 2.5px)" }
                     : undefined
                 }
               />
               <span
-                className="h-[1px] bg-black transition-all duration-300 origin-center"
+                className="h-[2px] bg-[#1A1A18] transition-all duration-300 origin-center"
                 style={
                   menuOpen
                     ? {
-                        width: "1.5rem",
+                        width: "1.25rem",
                         transform: "rotate(-45deg) translate(1px, -1px)",
                       }
-                    : { width: "1rem" }
+                    : { width: "0.85rem" }
                 }
               />
             </button>
@@ -101,53 +91,30 @@ export default function Navigation({ name }) {
         </div>
       </div>
 
+      {/* Mobile Navigation Dropdown */}
       <div
         id="mobileMenu"
-        className={`${menuOpen ? "block" : "hidden"} lg:hidden border-t`}
-        style={{
-          background: "#020223",
-          borderColor: "rgba(201,168,76,0.15)",
-        }}
+        className={`${
+          menuOpen ? "block" : "hidden"
+        } lg:hidden border-t border-[#E8E2D9] bg-white shadow-xl`}
       >
-        <div className="px-6 py-8 space-y-6">
+        <div className="px-6 py-8 space-y-5">
+          {navigationArray.map((item) => (
+            <a
+              key={item.id}
+              href={item.link}
+              onClick={closeMobile}
+              className="block text-sm font-semibold tracking-[0.15em] uppercase text-[#666158] hover:text-[#2C5E3B] transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
           <a
-            href="#about"
+            href="/contact"
             onClick={closeMobile}
-            className="block text-sm tracking-[0.15em] uppercase text-white/70 hover:text-[#F1E7D6]"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-semibold tracking-[0.15em] uppercase mt-4 w-full bg-[#2C5E3B] text-white hover:bg-[#234B2F] transition-colors shadow-sm"
           >
-            About
-          </a>
-          <a
-            href="#expertise"
-            onClick={closeMobile}
-            className="block text-sm tracking-[0.15em] uppercase text-white/70 hover:text-[#F1E7D6]"
-          >
-            Expertise
-          </a>
-          <a
-            href="#work"
-            onClick={closeMobile}
-            className="block text-sm tracking-[0.15em] uppercase text-white/70 hover:text-[#F1E7D6]"
-          >
-            Selected Work
-          </a>
-          <a
-            href="#experience"
-            onClick={closeMobile}
-            className="block text-sm tracking-[0.15em] uppercase text-white/70 hover:text-[#F1E7D6]"
-          >
-            Experience
-          </a>
-          <a
-            href="#contact"
-            onClick={closeMobile}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm text-xs tracking-[0.15em] uppercase mt-4 w-full justify-center"
-            style={{
-              background: "#F1E7D6",
-              color: "#0A0A0A",
-            }}
-          >
-            Start a Project
+            Hire me
           </a>
         </div>
       </div>

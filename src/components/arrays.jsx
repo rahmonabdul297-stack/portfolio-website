@@ -1,23 +1,8 @@
-export const navigationArray =[
-    {
-        id: 1,
-        name: "About",
-        link: "#about"
-    },
-    {
-        id: 2,
-        name: "Expertise",
-        link: "#expertise"
-    },
-    {
-        id: 3,
-        name: "Selected Work",
-        link: "#work"
-    },
-    {
-        id: 4,
-        name: "Experience",
-        link: "#experience"
-    }
-]
-
+export const navigationArray = [
+  { id: 1, name: "About", link: "/about" },
+  { id: 2, name: "Expertise", link: "/expertise" },
+  { id: 3, name: "Selected Work", link: "/work" },
+  { id: 4, name: "Experience", link: "/experience" },
+  { id: 5, name: "Contact", link: "/contact" },
+  { id: 6, name: "E-Book", link: "https://software-store-three.vercel.app" },
+];

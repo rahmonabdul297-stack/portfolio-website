@@ -27,7 +27,7 @@ export default function Expertise() {
       id="expertise"
       className="py-24 lg:py-36 px-6 lg:px-8 border-t"
       style={{
-        background: "#020223",
+        background: "#1c3b25",
         borderColor: "rgba(255,255,255,0.05)",
       }}
     >

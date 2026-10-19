@@ -13,34 +13,35 @@ const ITEMS = [
   "Tailwind",
 ];
 
+
 function MarqueeSegments({ id }) {
   return (
     <>
       {ITEMS.map((label) => (
         <Fragment key={`${id}-${label}`}>
-          <span className="text-xs tracking-[0.3em] uppercase text-white">
+          <span className="text-xs font-semibold tracking-[0.3em] uppercase text-[#FFF]">
             {label}
           </span>
-          <span className="text-[#F1E7D6]/40 text-xs">◆</span>
+          <span className="text-[#FFF] text-xs font-bold">◆</span>
         </Fragment>
       ))}
     </>
   );
 }
 
-export default function  ToolsMarquee() {
+export default function SkillsMarquee() {
   return (
     <div
-      className="py-6 border-y overflow-hidden relative"
-      style={{ background: "#0a0a31", borderColor: "rgba(255,255,255,0.05)" }}
+      className="py-6 border-y border-[#E8E2D9] overflow-hidden relative bg-[#2C5E3B]"
     >
+      {/* Soft gradient edge fades */}
       <div
-        className="absolute left-0 top-0 w-32 h-full z-10"
-        style={{ background: "linear-gradient(90deg, #0D0D0D, transparent)" }}
+        className="absolute left-0 top-0 w-32 h-full z-10 pointer-events-none"
+        style={{ background: "linear-gradient(90deg, #FAF7F2, transparent)" }}
       />
       <div
-        className="absolute right-0 top-0 w-32 h-full z-10"
-        style={{ background: "linear-gradient(270deg, #0D0D0D, transparent)" }}
+        className="absolute right-0 top-0 w-32 h-full z-10 pointer-events-none"
+        style={{ background: "linear-gradient(270deg, #FAF7F2, transparent)" }}
       />
 
       <div className="flex items-center gap-10 whitespace-nowrap animate-marquee">

@@ -13,7 +13,7 @@ export default function Footer({ name }) {
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full border border-[#F1E7D6]/30 flex items-center justify-center bg-[#F1E7D6]/5">
             <img
-              src="/images/my-img.jpg"
+              src="/images/profile.jfif"
               alt=""
               className="h-full w-full rounded-full"
             />
