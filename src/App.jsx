@@ -9,7 +9,7 @@ import ExpertisePage from "./pages/ExpertisePage.jsx";
 import WorkPage from "./pages/WorkPage.jsx";
 import ExperiencePage from "./pages/ExperiencePage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
-import HomePage from "./pages/HomePage.jsx";
+
 
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -58,7 +58,7 @@ export default function App() {
       {/* Dynamic Route Pages */}
       <div className="flex-grow">
         <Routes>
-          {/* <Route path="/" element={<HomePage name={name} />} /> */}
+          <Route path="/" element={<HomePage name={name} />} />
           <Route path="/about" element={<AboutPage name={name} />} />
           <Route path="/expertise" element={<ExpertisePage />} />
           <Route path="/work" element={<WorkPage />} />
