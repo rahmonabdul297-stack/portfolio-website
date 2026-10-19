@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation.jsx";
 import Footer from "./components/Footer.jsx";
 import VisitTracker from "./components/tracker.jsx";
-import useScrollReveal from "./hooks/useScrollReveal.jsx";
+
 
 import AboutPage from "./pages/AboutPage.jsx";
 import ExpertisePage from "./pages/ExpertisePage.jsx";
