@@ -1,5 +1,5 @@
-import Expertise from "../components/Expertise";
-import ToolsMarquee from "../components/ToolsMarquee";
+import Expertise from "../components/Expertise.jsx";
+import ToolsMarquee from "../components/ToolsMarquee.jsx";
 
 export default function ExpertisePage() {
   return (

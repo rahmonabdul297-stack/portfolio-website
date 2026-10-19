@@ -1,19 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import VisitTracker from "./components/tracker";
-import useScrollReveal from "./hooks/useScrollReveal";
+import Navigation from "./components/Navigation.jsx";
+import Footer from "./components/Footer.jsx";
+import VisitTracker from "./components/tracker.jsx";
+import useScrollReveal from "./hooks/useScrollReveal.jsx";
 
-import AboutPage from "./pages/AboutPage";
-import ExpertisePage from "./pages/ExpertisePage";
-import WorkPage from "./pages/WorkPage";
-import ExperiencePage from "./pages/ExperiencePage";
-import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage.jsx";
+import ExpertisePage from "./pages/ExpertisePage.jsx";
+import WorkPage from "./pages/WorkPage.jsx";
+import ExperiencePage from "./pages/ExperiencePage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import HomePage from "./pages/HomePage";
-
 
 export default function App() {
   useScrollReveal();
