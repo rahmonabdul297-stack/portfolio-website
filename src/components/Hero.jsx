@@ -97,7 +97,7 @@ export default function Hero({ name }) {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 relative z-10">
             <a
-              href="#work"
+              href="/work"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-xs tracking-[0.2em] uppercase font-semibold bg-[#FAF7F2] text-[#2C5E3B] hover:bg-[#F1E7D6] transition-all duration-300 shadow-md"
             >
               Explore Projects
