@@ -13,6 +13,7 @@ import ContactPage from "./pages/ContactPage.jsx";
 
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+import HomePage from "./pages/homepage.jsx";
 
 export default function App() {
   useScrollReveal();
@@ -59,6 +60,7 @@ export default function App() {
       <div className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage name={name} />} />
+          <Route path="/home" element={<HomePage name={name} />} />
           <Route path="/about" element={<AboutPage name={name} />} />
           <Route path="/expertise" element={<ExpertisePage />} />
           <Route path="/work" element={<WorkPage />} />
