@@ -20,7 +20,7 @@ export default function About({ name }) {
 
             <div className="space-y-6 text-base lg:text-lg leading-relaxed text-[#666158] font-normal">
               <p>
-                I am a full-stack software engineer with over two years of experience building and scaling complex digital products. My approach is rooted in the belief that great code is maintainable—it solves complex business logic while remaining highly performant.
+                I am a full-stack software engineer with over two years of experience building and scaling complex digital products. My approach is rooted in the belief that great code is maintainable, it solves complex business logic while remaining highly performant.
               </p>
               <p>
                 From developing robust APIs and microservices to crafting responsive, state-driven user interfaces, I navigate the entire web stack. I believe in clean architecture that speaks volumes and systems that scale effortlessly.
