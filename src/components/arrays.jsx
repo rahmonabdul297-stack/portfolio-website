@@ -4,6 +4,5 @@ export const navigationArray = [
   { id: 3, name: "Selected Work", link: "/work" },
   { id: 4, name: "Experience", link: "/experience" },
   { id: 5, name: "Contact", link: "/contact" },
-  { id: 6, name: "E-Book", link: "" },
-  // https://software-store-three.vercel.app
+  { id: 6, name: "E-Book", link: "https://software-store-three.vercel.app" },
 ];
